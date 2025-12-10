@@ -1,0 +1,120 @@
+/* src/pages/Auth.css */
+
+/* Wrapper Utama: Background Image Gelap */
+.auth-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://assets.nflxext.com/ffe/siteui/vlv3/f841d4c7-10e1-40af-bcae-07a3f8dc141a/f6d7434e-d6de-4185-a6d4-c77a2d08737b/US-en-20220502-popsignuptwoweeks-perspective_alpha_website_medium.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Logo di pojok kiri atas (Opsional jika Navbar tidak tampil) */
+.auth-logo {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  font-size: 2.5rem;
+  color: #e50914;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Kotak Form Hitam Transparan */
+.auth-box {
+  background-color: rgba(0, 0, 0, 0.75); /* Hitam transparan */
+  padding: 60px 68px 40px;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 450px;
+  color: white;
+  min-height: 500px;
+}
+
+.auth-box h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 28px;
+}
+
+/* Input Styles */
+.form-group {
+  margin-bottom: 16px;
+}
+
+.auth-input {
+  width: 100%;
+  background: #333;
+  border-radius: 4px;
+  border: 0;
+  color: #fff;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 20px;
+  font-size: 16px;
+  box-sizing: border-box; /* Agar padding tidak merusak width */
+}
+
+.auth-input:focus {
+  background: #454545;
+  outline: none;
+}
+
+/* Button Merah Netflix */
+.auth-button {
+  width: 100%;
+  background-color: #e50914;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 24px;
+  margin-bottom: 12px;
+  transition: background 0.2s;
+}
+
+.auth-button:hover {
+  background-color: #f40612;
+}
+
+.auth-button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+/* Error Message */
+.auth-error {
+  background: #e87c03;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* Footer Link Text */
+.auth-footer {
+  margin-top: 30px;
+  color: #737373;
+  font-size: 16px;
+}
+
+.auth-link {
+  color: white;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,99 @@
+/* src/components/Banner.css */
+
+.banner {
+  color: white;
+  object-fit: contain;
+  height: 60vh; /* Tinggi banner lebih proporsional */
+  min-height: 500px;
+  position: relative;
+}
+
+.banner-contents {
+  margin-left: 4%; /* Margin kiri responsif */
+  padding-top: 180px;
+  height: 190px;
+  text-align: left;
+  max-width: 600px; /* Batasi lebar agar tidak melebar ke seluruh layar */
+}
+
+.banner-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  padding-bottom: 0.3rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+  margin-bottom: 1rem;
+}
+
+.banner-description {
+  width: 100%;
+  max-width: 450px;
+  line-height: 1.4;
+  padding-top: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+  margin-bottom: 1.5rem; /* Jarak antara deskripsi dan tombol */
+}
+
+/* --- PERBAIKAN TOMBOL (BUTTONS) --- */
+
+.banner-buttons {
+  display: flex; /* Biar tombol berjejer ke samping */
+  gap: 1rem; /* Jarak antar tombol */
+  margin-bottom: 1rem;
+}
+
+.banner-btn {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 4px;
+  padding: 0.6rem 2rem; /* Padding atas-bawah 0.6rem, kiri-kanan 2rem */
+  display: flex;
+  align-items: center; /* Ikon dan Teks sejajar vertikal */
+  gap: 0.5rem; /* Jarak antara ikon dan teks */
+  transition: all 0.2s;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Style Khusus Tombol PLAY (Putih) */
+.play-btn {
+  background-color: white;
+  color: black;
+}
+
+.play-btn:hover {
+  background-color: rgba(255, 255, 255, 0.75); /* Sedikit transparan saat hover */
+}
+
+/* Style Khusus Tombol MY LIST (Abu-abu Transparan) */
+.banner-btn:not(.play-btn) {
+  background-color: rgba(109, 109, 110, 0.7);
+  color: white;
+}
+
+.banner-btn:not(.play-btn):hover {
+  background-color: rgba(109, 109, 110, 0.4);
+}
+
+/* Efek Klik */
+.banner-btn:active {
+  transform: scale(0.95); /* Sedikit mengecil saat diklik */
+}
+
+/* Gradasi Bawah Banner */
+.banner-fadeBottom {
+  height: 15rem; /* Gradasi lebih tinggi agar mulus */
+  background-image: linear-gradient(
+    180deg,
+    transparent,
+    rgba(20, 20, 20, 0.6),
+    #141414
+  );
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  pointer-events: none;
+}

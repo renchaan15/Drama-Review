@@ -1,0 +1,274 @@
+.detail-page {
+    background-color: #111;
+    min-height: 100vh;
+    color: white;
+}
+
+.detail-header {
+    height: 50vh; /* Setengah layar */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.detail-header-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 50%, #111 100%);
+}
+
+.detail-content {
+    padding: 0 20px 40px;
+    margin-top: -80px; /* INI KUNCINYA: Menarik konten ke atas menumpuk gambar */
+    position: relative;
+    z-index: 10;
+}
+
+.info-flex {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.poster-card img {
+    width: 140px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    border: 2px solid #333;
+}
+
+.title-info {
+    margin-bottom: 10px;
+}
+
+.title-info h1 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.genres {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+}
+
+.genre-tag {
+    font-size: 0.8rem;
+    color: #ccc;
+    background: rgba(255,255,255,0.1);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.action-bar {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #e50914;
+    color: white;
+}
+
+.btn-secondary {
+    background-color: #333;
+    color: white;
+}
+
+.section {
+    margin-top: 30px;
+}
+
+.section h3 {
+    margin-bottom: 10px;
+    border-left: 4px solid #e50914;
+    padding-left: 10px;
+}
+
+.overview {
+    line-height: 1.6;
+    color: #ddd;
+}
+
+/* Cast List Horizontal */
+.cast-list {
+    display: flex;
+    overflow-x: scroll;
+    gap: 15px;
+    padding-bottom: 10px;
+}
+
+.cast-list::-webkit-scrollbar {
+    height: 5px;
+}
+.cast-list::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 5px;
+}
+
+.cast-card {
+    min-width: 100px;
+    text-align: center;
+}
+
+.cast-card img {
+    width: 100px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 5px;
+}
+
+.actor-name {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.character-name {
+    font-size: 0.7rem;
+    color: #aaa;
+}
+
+/* --- CSS BARU UNTUK TRAILER & REVIEW --- */
+
+/* Video Responsive Wrapper */
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%; /* Rasio 16:9 */
+  position: relative;
+  height: 0;
+  border-radius: 8px;
+  background-color: #000;
+  margin-top: 15px;
+}
+
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+/* Review Form Styling */
+.review-form-card {
+  background-color: #1f1f1f;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  border: 1px solid #333;
+}
+
+.review-form-card h4 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.rating-input {
+  margin-bottom: 15px;
+  color: #ccc;
+}
+
+.rating-select {
+  background-color: #333;
+  color: white;
+  border: 1px solid #555;
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.review-textarea {
+  width: 100%;
+  background-color: #333;
+  border: 1px solid #555;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  resize: vertical; /* User bisa tarik tinggi textarea */
+  font-family: inherit;
+  margin-bottom: 10px;
+}
+
+.review-textarea:focus {
+  outline: none;
+  border-color: #e50914;
+}
+
+.btn-submit-review {
+  background-color: #e50914;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.btn-submit-review:hover {
+  background-color: #b20710;
+}
+
+/* Reviews List Styling */
+.review-card {
+  background-color: #141414;
+  border: 1px solid #333;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.reviewer-name {
+  font-weight: bold;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.reviewer-rating {
+  background-color: #333;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #e50914;
+}
+
+.review-content {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+  white-space: pre-wrap; /* Agar enter/baris baru terbaca */
+}
+
+.no-reviews {
+  color: #777;
+  font-style: italic;
+}

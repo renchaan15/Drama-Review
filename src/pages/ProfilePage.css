@@ -1,0 +1,210 @@
+/* src/pages/ProfilePage.css */
+
+.profile-page {
+  background-color: #141414;
+  min-height: 100vh;
+  color: white;
+  padding-top: 100px; /* Jarak dari Navbar */
+  padding-bottom: 50px;
+}
+
+.profile-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* --- HEADER --- */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 30px;
+}
+
+.profile-avatar-large {
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 2px solid #333;
+}
+
+.profile-info-text h1 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.profile-join-date {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.profile-stats {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.stat-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #222;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.btn-logout-small {
+  background-color: #e50914;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.btn-logout-small:hover {
+  background-color: #b20710;
+}
+
+/* --- CONTENT --- */
+.content-section {
+  margin-bottom: 30px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.section-header h3 {
+  font-size: 1.2rem;
+  border-left: 4px solid #e50914;
+  padding-left: 10px;
+}
+
+.see-all-link {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.see-all-link:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.divider {
+  height: 1px;
+  background-color: #333;
+  margin: 30px 0;
+}
+
+.empty-text {
+  color: #666;
+  font-style: italic;
+}
+
+/* Mini Watchlist Grid */
+.mini-watchlist-grid {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+}
+
+.mini-poster-card {
+  flex-shrink: 0;
+  width: 100px;
+  height: 150px;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.mini-poster-card:hover {
+  transform: scale(1.05);
+}
+
+.mini-poster-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Reviews History List */
+.reviews-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.review-history-card {
+  background-color: #1f1f1f;
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px solid #333;
+}
+
+.rh-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.rh-rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: white;
+  font-weight: bold;
+}
+
+.rh-content {
+  color: #ddd;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.rh-link {
+  font-size: 0.85rem;
+  color: #e50914;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.rh-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsif untuk HP */
+@media (max-width: 600px) {
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .profile-stats {
+    justify-content: center;
+  }
+
+  .btn-logout-small {
+    margin: 0 auto;
+  }
+}

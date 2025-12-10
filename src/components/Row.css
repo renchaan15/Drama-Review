@@ -1,0 +1,59 @@
+/* src/components/Row.css */
+
+.row {
+  margin-left: 0; /* Reset margin karena parent sudah punya padding */
+  color: white;
+  margin-bottom: 40px; /* Jarak vertikal antar kategori lebih lega */
+}
+
+.row-title {
+  margin-left: 10px; /* Sedikit indentasi untuk judul */
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.row-posters {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px 10px; /* Padding extra biar hover effect ga kepotong */
+  gap: 15px; /* Jarak antar poster horizontal */
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar */
+.row-posters::-webkit-scrollbar {
+  display: none;
+}
+.row-posters {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.row-poster-container {
+  position: relative;
+  transition: transform 450ms;
+  flex-shrink: 0; /* Mencegah gambar mengecil paksa */
+}
+
+.row-poster-container:hover {
+  transform: scale(1.1); /* Zoom effect */
+  z-index: 10;
+}
+
+.row-poster {
+  object-fit: cover;
+  width: 100%;
+  max-height: 120px; /* Tinggi standar backdrop */
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+}
+
+/* Poster Large (Netflix Originals) */
+.row-posterLarge {
+  max-height: 300px; /* Lebih tinggi dan megah */
+  border-radius: 6px;
+}

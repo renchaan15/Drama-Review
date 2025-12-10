@@ -1,0 +1,149 @@
+/* Container Utama */
+.watchlist-container {
+  padding: 100px 40px 40px; /* Padding atas besar agar tidak tertutup Navbar */
+  min-height: 100vh;
+  background-color: #141414;
+  color: white;
+}
+
+.page-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 15px;
+}
+
+/* Grid Layout (Responsif) */
+.watchlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+/* Kartu Drama */
+.watchlist-card {
+  position: relative;
+  background-color: #1f1f1f;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.watchlist-card:hover {
+  transform: scale(1.05);
+  z-index: 10;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+}
+
+/* Gambar Poster */
+.img-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2/3; /* Memastikan rasio poster selalu sama */
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Info Judul di Bawah */
+.card-info {
+  padding: 10px;
+}
+
+.card-info h3 {
+  font-size: 0.9rem;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Judul panjang jadi ... */
+  font-weight: 500;
+}
+
+/* Overlay saat Hover Gambar */
+.hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.watchlist-card:hover .hover-overlay {
+  opacity: 1;
+}
+
+.view-text {
+  border: 1px solid white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Tombol Hapus (Pojok Kanan Atas) */
+.delete-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  opacity: 0; /* Tersembunyi kalau tidak di-hover */
+  transition: opacity 0.2s, transform 0.2s;
+  padding: 0;
+}
+
+.watchlist-card:hover .delete-btn {
+  opacity: 1; /* Muncul saat kartu di-hover */
+}
+
+.delete-btn:hover {
+  transform: scale(1.2);
+}
+
+/* Tampilan Kosong / Belum Login */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  text-align: center;
+  gap: 20px;
+}
+
+.empty-state h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.watchlist-btn {
+  background-color: #e50914;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.watchlist-btn:hover {
+  background-color: #b20710;
+}
+
+.loading-text {
+  text-align: center;
+  color: #888;
+  margin-top: 50px;
+}

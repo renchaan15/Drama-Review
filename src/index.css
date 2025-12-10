@@ -1,0 +1,53 @@
+/* 1. Import Font dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap');
+
+/* 2. Reset dasar agar tampilan konsisten di semua browser */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 3. Atur Font Utama dan Warna Latar Belakang (Netflix Style) */
+body {
+  margin: 0;
+  /* Font untuk teks isi (paragraf, input, tombol) */
+  font-family: 'Poppins', sans-serif; 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  /* Warna Background Gelap Khas Netflix (#141414) */
+  background-color: #141414; 
+  color: #ffffff; /* Teks putih secara default */
+}
+
+/* 4. Atur Font untuk Judul agar terlihat Sinematik */
+h1, h2, h3, h4, h5, h6 {
+  /* Font tebal dan tinggi ala poster film */
+  font-family: 'Bebas Neue', cursive; 
+  letter-spacing: 1.5px; /* Sedikit jarak antar huruf biar elegan */
+  font-weight: 400; /* Bebas Neue hanya punya 1 ketebalan */
+}
+
+/* Kustomisasi Scrollbar (Opsional: Biar makin mirip App Pro) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #141414; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333; 
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e50914; /* Merah saat di-hover */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
